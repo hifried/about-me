@@ -61,7 +61,15 @@ if(petsGuess === 'N') {
   alert('Please answer with Y or N!');
 }
 
+var courseGuess = prompt('Do you think I will pass Code 201? Please respond with Y or N.').toUpperCase();
+
+if(courseGuess === 'N') {
+  alert('Well, aren\'t you just an optimist. Jerk.');
+} else if (courseGuess === 'Y') {
+  alert('I certainly hope you are correct!');
+} else {
+  alert('Can you read? Please answer with Y or N!')
+}
 
 
-// yes, YES, Yes, no, NO, No, y, Y, N, n, yeah, yep, nope
 
