@@ -24,8 +24,10 @@ if(startGame) {
 } else {
   alert('Ok, hasta la vista, baby!');
 }
+
 var countryGuess = prompt('How many countries do you think I have visited?');
 countryGuess = parseInt(countryGuess);
+console.log('The user guessed: ' + countryGuess + ' countries.');
 
 if(countryGuess === 22 || countryGuess === 'twenty-two' || countryGuess === 'twenty two') {
   alert('That is correct!');
@@ -35,13 +37,16 @@ if(countryGuess === 22 || countryGuess === 'twenty-two' || countryGuess === 'twe
 
 var languageGuess = prompt('How many languages do you think I speak?');
 languageGuess = parseInt(languageGuess);
+console.log('The user guessed: ' + languageGuess + ' languages.');
 
 if(languageGuess === 7 || languageGuess === 'seven') {
   alert('That is correct!');
-} else {'Sorry, you are incorrect!'
+} else {
+  alert('Sorry, you are incorrect!');
 }
 
 var marriedGuess = prompt('Do you think I am married? Please respond with Y or N.').toUpperCase();
+console.log('The user guessed: ' + marriedGuess + ' about me being married.')
 
 if(marriedGuess === 'N') {
   alert('You are correct.  Isn\'t that sad?!');
@@ -52,6 +57,7 @@ if(marriedGuess === 'N') {
 }
 
 var petsGuess = prompt('Do you think I own a pet? Please respond with Y or N.').toUpperCase();
+console.log('The user guessed: ' + petsGuess + ' about me owning a pet.')
 
 if(petsGuess === 'N') {
   alert('You\'re right! You\'re so perceptive.');
@@ -62,6 +68,7 @@ if(petsGuess === 'N') {
 }
 
 var courseGuess = prompt('Do you think I will pass Code 201? Please respond with Y or N.').toUpperCase();
+console.log('The user guessed: ' + courseGuess + ' about me passing Code 201.')
 
 if(courseGuess === 'N') {
   alert('Well, aren\'t you just an optimist. Jerk.');
