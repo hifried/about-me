@@ -78,5 +78,24 @@ if(courseGuess === 'N') {
   alert('Can you read? Please answer with Y or N!')
 }
 
+var seattleGuess = prompt('Do you think I am happy to be in Seattle? Please respond with Y or N.').toUpperCase();
+console.log('The user guessed: ' + seattleGuess + ' about me being happy to be in Seattle.')
 
+if(seattleGuess === 'N') {
+  alert('You\'re wrong. Why would you think that?');
+} else if (courseGuess === 'Y') {
+  alert('Bravo! Damn right I\'m happy to be here!');
+} else {
+  alert('Can you read? Please answer with Y or N!')
+}
 
+var rainGuess = prompt('Do you think I\'m down with the rainy Seattle weather? Please respond with Y or N.').toUpperCase();
+console.log('The user guessed: ' + rainGuess + ' about me being down with the rainy Seattle weather.')
+
+if(rainGuess === 'N') {
+  alert('You\'re wrong. I don\'t mind the rain one bit! (Yet.)');
+} else if (courseGuess === 'Y') {
+  alert('That\'s right! The moisture makes my skin feels so good.');
+} else {
+  alert('Can you read? Please answer with Y or N!')
+}
