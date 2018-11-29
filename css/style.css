@@ -1,8 +1,38 @@
+
+
 body {
-  background-color: rgb(126, 24, 243);
+  background-image: url(https://www.cosmeticsurgeryforyou.com/wp-content/uploads/2017/02/7314.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: auto;
+  padding-right: auto;
+  margin: 12px 12px 12px 12px;
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 50px;
   color: white;
+  text-align: center;
+  margin: 12px;
 }
+
+h2 {
+  font-size: 36px;
+  color: white;
+  text-align: left;
+  margin: 12px 12px 12px 40px;
+}
+
+h3 {
+  font-size: 24px;
+  color: white;
+  margin: 12px 12px 12px 40px;
+}
+
+li {
+  font-size: 18px;
+  list-style-type: decimal;
+  color: rgb(250, 8, 157);
+  margin: 5px 12px 12px 55px; 
+}
+
