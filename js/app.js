@@ -7,7 +7,7 @@ var startGame = confirm('Do you want to play my guessing game?');
 if(startGame) {
   alert('Great, let\'s play!');
 } else {
-  alert('Ok, hasta la vista, baby!');
+  alert('Ok that\'s fine. Let\'s play anyway!');
 }
 
 var userName = prompt('What\'s your name?');
@@ -43,9 +43,9 @@ var courseGuess = prompt('Do you think I will pass Code 201? Please respond with
 console.log('The user guessed: ' + courseGuess + ' about me passing Code 201.');
 
 if(courseGuess === 'N') {
-  alert('Well, aren\'t you just an optimist. Jerk.');
+  alert('Wrong, jerk! Aren\'t you just the optimist.');
 } else if (courseGuess === 'Y') {
-  alert('I certainly hope you are correct!');
+  alert('Correct! (I mean, I certainly hope you are correct!)');
   correctAnswer++;
 } else {
   alert('Can you read? Please answer with Y or N!');
