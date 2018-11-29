@@ -1,22 +1,5 @@
 'use strict';
 
-// CONDITIONAL LOGIC
-// if/else
-
-// if(condition) {
-//   run this line of code
-// } else {
-//   run this code instead
-// }
-
-// if(condition) {
-//   run this line of code
-// } else if (condition 2) {
-//   run this code
-// } else {
-//   run this code instead
-// }
-
 var startGame = confirm('Do you want to play my guessing game?');
 
 if(startGame) {
@@ -25,28 +8,8 @@ if(startGame) {
   alert('Ok, hasta la vista, baby!');
 }
 
-var countryGuess = prompt('How many countries do you think I have visited?');
-countryGuess = parseInt(countryGuess);
-console.log('The user guessed: ' + countryGuess + ' countries.');
-
-if(countryGuess === 22 || countryGuess === 'twenty-two' || countryGuess === 'twenty two') {
-  alert('That is correct!');
-} else {
-  alert('Wrong!  Nice try.');
-}
-
-var languageGuess = prompt('How many languages do you think I speak?');
-languageGuess = parseInt(languageGuess);
-console.log('The user guessed: ' + languageGuess + ' languages.');
-
-if(languageGuess === 7 || languageGuess === 'seven') {
-  alert('That is correct!');
-} else {
-  alert('Sorry, you are incorrect!');
-}
-
 var marriedGuess = prompt('Do you think I am married? Please respond with Y or N.').toUpperCase();
-console.log('The user guessed: ' + marriedGuess + ' about me being married.')
+console.log('The user guessed: ' + marriedGuess + ' about me being married.');
 
 if(marriedGuess === 'N') {
   alert('You are correct.  Isn\'t that sad?!');
@@ -57,7 +20,7 @@ if(marriedGuess === 'N') {
 }
 
 var petsGuess = prompt('Do you think I own a pet? Please respond with Y or N.').toUpperCase();
-console.log('The user guessed: ' + petsGuess + ' about me owning a pet.')
+console.log('The user guessed: ' + petsGuess + ' about me owning a pet.');
 
 if(petsGuess === 'N') {
   alert('You\'re right! You\'re so perceptive.');
@@ -68,34 +31,89 @@ if(petsGuess === 'N') {
 }
 
 var courseGuess = prompt('Do you think I will pass Code 201? Please respond with Y or N.').toUpperCase();
-console.log('The user guessed: ' + courseGuess + ' about me passing Code 201.')
+console.log('The user guessed: ' + courseGuess + ' about me passing Code 201.');
 
 if(courseGuess === 'N') {
   alert('Well, aren\'t you just an optimist. Jerk.');
 } else if (courseGuess === 'Y') {
   alert('I certainly hope you are correct!');
 } else {
-  alert('Can you read? Please answer with Y or N!')
+  alert('Can you read? Please answer with Y or N!');
 }
 
 var seattleGuess = prompt('Do you think I am happy to be in Seattle? Please respond with Y or N.').toUpperCase();
-console.log('The user guessed: ' + seattleGuess + ' about me being happy to be in Seattle.')
+console.log('The user guessed: ' + seattleGuess + ' about me being happy to be in Seattle.');
 
 if(seattleGuess === 'N') {
   alert('You\'re wrong. Why would you think that?');
 } else if (courseGuess === 'Y') {
   alert('Bravo! Damn right I\'m happy to be here!');
 } else {
-  alert('Can you read? Please answer with Y or N!')
+  alert('Can you read? Please answer with Y or N!');
 }
 
 var rainGuess = prompt('Do you think I\'m down with the rainy Seattle weather? Please respond with Y or N.').toUpperCase();
-console.log('The user guessed: ' + rainGuess + ' about me being down with the rainy Seattle weather.')
+console.log('The user guessed: ' + rainGuess + ' about me being down with the rainy Seattle weather.');
 
 if(rainGuess === 'N') {
   alert('You\'re wrong. I don\'t mind the rain one bit! (Yet.)');
 } else if (courseGuess === 'Y') {
-  alert('That\'s right! The moisture makes my skin feels so good.');
+  alert('That\'s right! The moisture makes my skin feel so good.');
 } else {
-  alert('Can you read? Please answer with Y or N!')
+  alert('Can you read? Please answer with Y or N!');
+}
+
+var faveNumber = 88;
+var guessCounter = 0;
+
+var numberGuess = parseInt(prompt('Hey! Guess my favorite number.  Hint: It\'s between 0 and 100.'));
+console.log('The user guessed: ' + numberGuess + ' is my favorite number.');
+
+while(guessCounter < 4) {
+
+  if(numberGuess < faveNumber && numberGuess > 0) {
+    alert('Nope. Too low. Please try again.');
+    numberGuess = parseInt(prompt('Guess my favorite number.  Hint: It\'s between 0 and 100.'));
+    console.log('The user guessed: ' + numberGuess + ' is my favorite number.');
+    guessCounter++;
+  }
+
+  else if(numberGuess > faveNumber && numberGuess < 100) {
+    alert('Nope. Too high. Please try again.');
+    numberGuess = parseInt(prompt('Guess my favorite number.  Hint: It\'s between 0 and 100.'));
+    console.log('The user guessed: ' + numberGuess + ' is my favorite number.');
+    guessCounter++;
+  }
+
+  else if(numberGuess > 100) {
+    alert('Yo! I said the number is between 0 and 100. Why did you guess a number greater than 100?');
+    numberGuess = parseInt(prompt('Guess my favorite number.  Hint: It\'s between 0 and 100.'));
+    console.log('The user guessed: ' + numberGuess + '.');
+    guessCounter++;
+  }
+
+  else if(numberGuess < 1) {
+    alert('Yo! I said the number is between 0 and 100. Why did you guess a number less than 1?');
+    numberGuess = parseInt(prompt('Guess my favorite number.  Hint: It\'s between 0 and 100.'));
+    console.log('The user guessed: ' + numberGuess + '.');
+    guessCounter++;
+  }
+
+  else if(numberGuess === faveNumber) {
+    alert('Wow, that\'s right! Great guess!');
+    console.log('The user guessed: ' + numberGuess + ' is my favorite number.');
+    break;
+  }
+
+  else{
+    alert('Please enter a number.');
+    numberGuess = parseInt(prompt('Guess my favorite number.  Hint: It\'s between 0 and 100.'));
+    console.log('The user guessed: a non-number.');
+    guessCounter++;
+  }
+
+  if(guessCounter === 3) {
+    alert('Nope. Sorry, you\'re out of guesses. The correct number is 88.');
+    break;
+  }
 }
